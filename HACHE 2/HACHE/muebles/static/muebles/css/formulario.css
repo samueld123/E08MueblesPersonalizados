@@ -1,0 +1,123 @@
+:root {
+    --colorTextos: #49454567;
+}
+
+*,
+::before,
+::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #fff;
+}
+
+.Contenedor form {
+    font-family: "Roboto";
+    height: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 100px 100px 20px 100px;
+}
+
+h1 {
+    text-align: center;
+    font-weight: 700;
+}
+
+form {
+    background: #fff;
+    padding: 40px 0;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+form .grupo {
+    position: relative;
+    margin: 45px;
+}
+
+input {
+    background: none;
+    color: #c6c6c6;
+    font-size: 18px;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid var(--colorTextos);
+}
+
+input:focus {
+    outline: none;
+    color: rgba(0, 0, 0, 0.842);
+}
+
+label {
+    color: var(--colorTextos);
+    font-size: 16px;
+    position: absolute;
+    left: 5px;
+    top: 10px;
+    transition: 0.5s ease-in-out all;
+    pointer-events: none;
+}
+
+p {
+    color: var(--colorTextos);
+}
+
+p:hover {
+    color: #4D33FF;
+}
+
+input:focus~label,
+input:valid~label {
+    top: -14px;
+    font-size: 12px;
+    color: #4D33FF;
+}
+
+.barra {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.barra::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    bottom: 0;
+    position: absoulute;
+    background: #58FF41;
+    transition: 0.3s ease width;
+    left: 0;
+}
+
+input:focus~.barra::before {
+    width: 100%;
+}
+
+.buttonC {
+    margin: 30px 50%;
+}
+
+button {
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: block;
+    background-color: #4D33FF;
+    text-align: center;
+    color: #fff;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(77, 51, 255, 1);
+}
